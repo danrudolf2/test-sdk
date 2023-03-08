@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		269C11F429B6CE8A00458FF9 /* TestNativeSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 269C11F329B6CE8A00458FF9 /* TestNativeSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26DE40A829B9159B003417AB /* TestSDKClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE40A729B9159B003417AB /* TestSDKClient.swift */; };
+		B6C3956DDF02C5F4D4A51717 /* Pods_TestNativeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249FC57C9E6C21F82A5071A /* Pods_TestNativeSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		269C11F029B6CE8A00458FF9 /* TestNativeSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestNativeSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		269C11F329B6CE8A00458FF9 /* TestNativeSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestNativeSDK.h; sourceTree = "<group>"; };
+		26DE40A729B9159B003417AB /* TestSDKClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSDKClient.swift; sourceTree = "<group>"; };
+		484A2DEA23A44D6802A2C9E6 /* Pods-TestNativeSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestNativeSDK.release.xcconfig"; path = "Target Support Files/Pods-TestNativeSDK/Pods-TestNativeSDK.release.xcconfig"; sourceTree = "<group>"; };
+		48CD6200D49E565402E4F8F0 /* Pods-TestNativeSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestNativeSDK.debug.xcconfig"; path = "Target Support Files/Pods-TestNativeSDK/Pods-TestNativeSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		D249FC57C9E6C21F82A5071A /* Pods_TestNativeSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestNativeSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -20,6 +26,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C3956DDF02C5F4D4A51717 /* Pods_TestNativeSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -29,8 +36,11 @@
 		269C11E629B6CE8900458FF9 = {
 			isa = PBXGroup;
 			children = (
+				26DE40A729B9159B003417AB /* TestSDKClient.swift */,
 				269C11F229B6CE8A00458FF9 /* TestNativeSDK */,
 				269C11F129B6CE8A00458FF9 /* Products */,
+				892B07FC89ABDA01F964833E /* Pods */,
+				73168F3F14F74DA4AE12BC20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,6 +58,23 @@
 				269C11F329B6CE8A00458FF9 /* TestNativeSDK.h */,
 			);
 			path = TestNativeSDK;
+			sourceTree = "<group>";
+		};
+		73168F3F14F74DA4AE12BC20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D249FC57C9E6C21F82A5071A /* Pods_TestNativeSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		892B07FC89ABDA01F964833E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48CD6200D49E565402E4F8F0 /* Pods-TestNativeSDK.debug.xcconfig */,
+				484A2DEA23A44D6802A2C9E6 /* Pods-TestNativeSDK.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 269C11F729B6CE8A00458FF9 /* Build configuration list for PBXNativeTarget "TestNativeSDK" */;
 			buildPhases = (
+				9229213B73A2BE550F438298 /* [CP] Check Pods Manifest.lock */,
 				269C11EB29B6CE8A00458FF9 /* Headers */,
 				269C11EC29B6CE8A00458FF9 /* Sources */,
 				269C11ED29B6CE8A00458FF9 /* Frameworks */,
@@ -93,6 +121,7 @@
 				TargetAttributes = {
 					269C11EF29B6CE8A00458FF9 = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 				};
 			};
@@ -124,11 +153,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9229213B73A2BE550F438298 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestNativeSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		269C11EC29B6CE8A00458FF9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26DE40A829B9159B003417AB /* TestSDKClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +314,9 @@
 		};
 		269C11F829B6CE8A00458FF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48CD6200D49E565402E4F8F0 /* Pods-TestNativeSDK.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -280,6 +337,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -287,7 +345,9 @@
 		};
 		269C11F929B6CE8A00458FF9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 484A2DEA23A44D6802A2C9E6 /* Pods-TestNativeSDK.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
