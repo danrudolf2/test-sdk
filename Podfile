@@ -45,5 +45,6 @@ target 'TestNativeSDK' do
   pod 'boost'
   pod 'DoubleConversion'
   pod 'RCT-Folly'
+  pod 'React-graphics'
   
 end

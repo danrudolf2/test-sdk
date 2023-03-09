@@ -53,5 +53,6 @@ Pod::Spec.new do |s|
   s.dependency 'boost'
   s.dependency 'DoubleConversion'
   s.dependency 'RCT-Folly'
+  s.dependency 'React-graphics'
 
 end
